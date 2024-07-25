@@ -1,17 +1,19 @@
 {
-	"name": "ds_dl_bronze_json",
+	"name": "ds_blob_parquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Json",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation"
-			}
+				"type": "AzureBlobStorageLocation",
+				"container": "input"
+			},
+			"compressionCodec": "snappy"
 		},
-		"schema": {}
+		"schema": []
 	}
 }
