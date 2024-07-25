@@ -107,6 +107,7 @@
 														"storeSettings": {
 															"type": "AzureBlobStorageReadSettings",
 															"recursive": true,
+															"wildcardFileName": "*.json",
 															"enablePartitionDiscovery": false
 														},
 														"formatSettings": {
@@ -160,17 +161,41 @@
 														"storeSettings": {
 															"type": "AzureBlobStorageReadSettings",
 															"recursive": true,
+															"wildcardFileName": "*.parquet",
 															"enablePartitionDiscovery": false
 														},
 														"formatSettings": {
 															"type": "ParquetReadSettings"
 														}
 													},
-													"enableStaging": false
+													"sink": {
+														"type": "ParquetSink",
+														"storeSettings": {
+															"type": "AzureBlobFSWriteSettings"
+														},
+														"formatSettings": {
+															"type": "ParquetWriteSettings"
+														}
+													},
+													"enableStaging": false,
+													"translator": {
+														"type": "TabularTranslator",
+														"typeConversion": true,
+														"typeConversionSettings": {
+															"allowDataTruncation": true,
+															"treatBooleanAsNumber": false
+														}
+													}
 												},
 												"inputs": [
 													{
 														"referenceName": "ds_blob_parquet",
+														"type": "DatasetReference"
+													}
+												],
+												"outputs": [
+													{
+														"referenceName": "ds_dl_bronze_Parquet",
 														"type": "DatasetReference"
 													}
 												]
