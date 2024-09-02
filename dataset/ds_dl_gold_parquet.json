@@ -1,0 +1,21 @@
+{
+	"name": "ds_dl_gold_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datalakestorage00002",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "final_project1",
+				"fileSystem": "gold"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

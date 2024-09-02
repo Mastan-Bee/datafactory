@@ -1,0 +1,38 @@
+{
+	"name": "ds_dl_silver_products",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_datalakestorage00002",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "products",
+				"fileSystem": "silver"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "PRODUCT_ID",
+				"type": "INT32"
+			},
+			{
+				"name": "PRODUCT_NAME",
+				"type": "UTF8"
+			},
+			{
+				"name": "UNIT_PRICE",
+				"type": "FLOAT"
+			},
+			{
+				"name": "Ingestion_Date",
+				"type": "DATE"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

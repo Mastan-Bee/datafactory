@@ -1,5 +1,5 @@
 {
-	"name": "ds_blob_input_binary",
+	"name": "ds_blob_landing_txt",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_blob_dev",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "input"
+				"container": "landing"
 			}
 		}
 	},

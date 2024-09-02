@@ -1,18 +1,19 @@
 {
-	"name": "ds_blob_input_binary",
+	"name": "Json1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_blob_dev",
+			"referenceName": "ls_AzureBlobStorage",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Binary",
+		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"container": "input"
+				"container": "archive"
 			}
-		}
+		},
+		"schema": {}
 	},
 	"type": "Microsoft.DataFactory/factories/datasets"
 }
