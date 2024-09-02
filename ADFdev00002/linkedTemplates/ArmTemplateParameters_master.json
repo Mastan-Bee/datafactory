@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFdev00002"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"ds_sql_gold_password": {
+			"value": ""
+		},
+		"ls_AzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"ls_AzureDataLakeStorage_accountKey": {
+			"value": ""
+		},
+		"ls_blob_dev_connectionString": {
+			"value": ""
+		},
+		"ls_datalakestorage00002_accountKey": {
+			"value": ""
+		},
+		"ds_sql_gold_properties_typeProperties_server": {
+			"value": "sqlserverdev786.database.windows.net"
+		},
+		"ds_sql_gold_properties_typeProperties_database": {
+			"value": "sqldbdev"
+		},
+		"ds_sql_gold_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"ls_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://blobadfdevrg002.dfs.core.windows.net/"
+		},
+		"ls_datalakestorage00002_properties_typeProperties_url": {
+			"value": "https://dldev002.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
